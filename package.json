@@ -9,10 +9,18 @@
   "workspaces": [
     "packages/*"
   ],
+  "nohoist": [
+    "packages/subgraph/@graphprotocol/graph-ts",
+    "packages/subgraph/@graphprotocol/graph-ts/**"
+  ],
   "scripts": {
     "subgraph:build": "yarn workspace subgraph build",
     "subgraph:codegen": "yarn workspace subgraph codegen",
     "subgraph:deploy": "yarn workspace subgraph deploy",
-    "frontend:start": "yarn workspace frontend start"
+    "frontend:start": "yarn workspace frontend start",
+    "contract:compile": "yarn workspace backend compile",
+    "contract:test": "yarn workspace backend test",
+    "contract:deploy:fuji": "yarn workspace backend deploy:fuji",
+    "contract:verify:fuji": "yarn workspace backend verify:fuji"
   }
 }
