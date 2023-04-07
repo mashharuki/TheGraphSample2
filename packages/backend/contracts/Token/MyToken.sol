@@ -24,6 +24,9 @@ contract MyToken is
     // シンボル名
     string tokenSymbol;
 
+    event TokenCreated(string name, string symbol);
+    event balanceChanged(address to, uint256 amount, uint balanceOf);
+
     /**
      * コンストラクター
      * @param _name トークン名
@@ -36,6 +39,8 @@ contract MyToken is
         // トークン名とシンボル名を設定する
         tokenName = _name;
         tokenSymbol = _symbol;
+
+        emit TokenCreated(_name, _symbol);
     }
 
     /**
@@ -59,6 +64,7 @@ contract MyToken is
      */
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
+        emit balanceChanged(to, amount, balanceOf(to));
     }
 
     /**
@@ -68,6 +74,7 @@ contract MyToken is
      */
     function burnToken(address to, uint256 amount) public onlyOwner {
         _burn(to, amount);
+        emit balanceChanged(to, amount, balanceOf(to));
     }
 
     /**
