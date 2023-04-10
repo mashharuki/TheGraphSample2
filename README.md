@@ -1,9 +1,17 @@
 # TheGraphSample2
 TheGraph学習用のリポジトリです。
 
+## イベントの情報を元に情報を集める。
+
 ## デプロイしたコントラクト(Avalanche Fuji testnet)
 
 [0xa3fb6BDaEd02F22c5488e744a471C18784393881](https://testnet.snowtrace.io/address/0xa3fb6BDaEd02F22c5488e744a471C18784393881)
+
+## デプロイしたコントラクト Version2 (Avalanche Fuji testnet)
+
+[0x40be105c9293548Bf9C6B47Ca91D0aA934c4dAE7](https://testnet.snowtrace.io/address/0x40be105c9293548Bf9C6B47Ca91D0aA934c4dAE7#code)
+
+## デプロイしたコントラクト Version3 (Avalanche Fuji testnet)
 
 ## 既に存在するコントラクトを使ってsubgraph用のプロダクトを作る場合
 
@@ -19,6 +27,10 @@ graph init \
 ## playground
 
 [https://api.studio.thegraph.com/query/44992/subgraph2/v0.0.1](https://api.studio.thegraph.com/query/44992/subgraph2/v0.0.1)
+
+## playground version2
+
+[https://api.studio.thegraph.com/query/44992/subgraph2/v0.0.2](https://api.studio.thegraph.com/query/44992/subgraph2/v0.0.2)
 
 ## Sample Query
 
