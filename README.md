@@ -1,5 +1,6 @@
 # TheGraphSample2
-TheGraph学習用のリポジトリです。
+
+TheGraph 学習用のリポジトリです。
 
 ## イベントの情報を元に情報を集める。
 
@@ -9,15 +10,21 @@ TheGraph学習用のリポジトリです。
 
 ## デプロイしたコントラクト Version2 (Avalanche Fuji testnet)
 
+- MyToken コントラクト
+
 [0x40be105c9293548Bf9C6B47Ca91D0aA934c4dAE7](https://testnet.snowtrace.io/address/0x40be105c9293548Bf9C6B47Ca91D0aA934c4dAE7#code)
 
-## デプロイしたコントラクト Version3 (Avalanche Fuji testnet)
+## デプロイしたコントラクト Version2 (Avalanche Fuji testnet)
 
-## 既に存在するコントラクトを使ってsubgraph用のプロダクトを作る場合
+- DNS コントラクト
+
+[]()
+
+## 既に存在するコントラクトを使って subgraph 用のプロダクトを作る場合
 
 ```bash
 graph init \
-    --product subgraph-studio 
+    --product subgraph-studio
     --from-contract 0xa3fb6BDaEd02F22c5488e744a471C18784393881 \
     --network 43113 \
     --abi ./packages/frontend/src/contracts/MyToken.json \

@@ -21,6 +21,7 @@
     "contract:compile": "yarn workspace backend compile",
     "contract:test": "yarn workspace backend test",
     "contract:deploy:fuji": "yarn workspace backend deploy:fuji",
+    "contract:deploy:fuji:DNS": "yarn workspace backend deploy:fuji:DNS",
     "contract:verify:fuji": "yarn workspace backend verify:fuji"
   }
 }

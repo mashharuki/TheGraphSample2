@@ -11,6 +11,7 @@
         "compile": "npx truffle compile",
         "build": "npx truffle build",
         "deploy:fuji": "npx truffle migrate --network fuji",
+        "deploy:fuji:DNS": "npx truffle migrate --f 2 --to 2 --network fuji",
         "verify:fuji": "npx truffle run verify MyToken --network fuji"
     },
     "keywords": [],
@@ -26,6 +27,7 @@
         "@openzeppelin/contracts": "^4.8.0",
         "chai": "^4.3.6",
         "chai-bn": "^0.3.1",
+        "truffle": "^5.8.1",
         "truffle-assertions": "^0.9.2"
     }
 }
