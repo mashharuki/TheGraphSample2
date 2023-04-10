@@ -90,3 +90,9 @@ query {
   }
 }
 ```
+
+### yarn キャッシュをクリーンにする方法
+
+```
+yarn cache clean
+```
