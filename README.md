@@ -18,7 +18,7 @@ TheGraph 学習用のリポジトリです。
 
 - DNS コントラクト
 
-[]()
+[0xDA31aCa5eAE57FcA36ED109e71B8E407B348aB08](https://testnet.snowtrace.io/address/0xDA31aCa5eAE57FcA36ED109e71B8E407B348aB08#code)
 
 ## 既に存在するコントラクトを使って subgraph 用のプロダクトを作る場合
 
