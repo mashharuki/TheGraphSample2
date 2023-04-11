@@ -1260,3 +1260,114 @@ export class UpdateVc extends Entity {
     this.set("transactionHash", Value.fromBytes(value));
   }
 }
+
+export class TokenInfo extends Entity {
+  constructor(id: Bytes) {
+    super();
+    this.set("id", Value.fromBytes(id));
+  }
+
+  save(): void {
+    let id = this.get("id");
+    assert(id != null, "Cannot save TokenInfo entity without an ID");
+    if (id) {
+      assert(
+        id.kind == ValueKind.BYTES,
+        `Entities of type TokenInfo must have an ID of type Bytes but the id '${id.displayData()}' is of type ${id.displayKind()}`
+      );
+      store.set("TokenInfo", id.toBytes().toHexString(), this);
+    }
+  }
+
+  static load(id: Bytes): TokenInfo | null {
+    return changetype<TokenInfo | null>(
+      store.get("TokenInfo", id.toHexString())
+    );
+  }
+
+  get id(): Bytes {
+    let value = this.get("id");
+    return value!.toBytes();
+  }
+
+  set id(value: Bytes) {
+    this.set("id", Value.fromBytes(value));
+  }
+
+  get name(): string {
+    let value = this.get("name");
+    return value!.toString();
+  }
+
+  set name(value: string) {
+    this.set("name", Value.fromString(value));
+  }
+
+  get symbol(): string {
+    let value = this.get("symbol");
+    return value!.toString();
+  }
+
+  set symbol(value: string) {
+    this.set("symbol", Value.fromString(value));
+  }
+}
+
+export class UserInfo extends Entity {
+  constructor(id: Bytes) {
+    super();
+    this.set("id", Value.fromBytes(id));
+  }
+
+  save(): void {
+    let id = this.get("id");
+    assert(id != null, "Cannot save UserInfo entity without an ID");
+    if (id) {
+      assert(
+        id.kind == ValueKind.BYTES,
+        `Entities of type UserInfo must have an ID of type Bytes but the id '${id.displayData()}' is of type ${id.displayKind()}`
+      );
+      store.set("UserInfo", id.toBytes().toHexString(), this);
+    }
+  }
+
+  static load(id: Bytes): UserInfo | null {
+    return changetype<UserInfo | null>(store.get("UserInfo", id.toHexString()));
+  }
+
+  get id(): Bytes {
+    let value = this.get("id");
+    return value!.toBytes();
+  }
+
+  set id(value: Bytes) {
+    this.set("id", Value.fromBytes(value));
+  }
+
+  get did(): string {
+    let value = this.get("did");
+    return value!.toString();
+  }
+
+  set did(value: string) {
+    this.set("did", Value.fromString(value));
+  }
+
+  get name(): string {
+    let value = this.get("name");
+    return value!.toString();
+  }
+
+  set name(value: string) {
+    this.set("name", Value.fromString(value));
+  }
+
+  get balanceOf(): BigInt {
+    let value = this.get("balanceOf");
+    return value!.toBigInt();
+  }
+
+  set balanceOf(value: BigInt) {
+    this.set("balanceOf", Value.fromBigInt(value));
+  }
+}

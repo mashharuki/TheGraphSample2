@@ -52,6 +52,7 @@ dataSources:
     source:
       address: "0xDA31aCa5eAE57FcA36ED109e71B8E407B348aB08"
       abi: DNS
+      startBlock: 20704918
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
