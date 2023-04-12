@@ -20,8 +20,7 @@ export function handleApproval(event: ApprovalEvent): void {
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.owner = event.params.owner
-  //entity.approved = event.params.approved
-  //entity.tokenId = event.params.tokenId
+  entity.tokenId = event.params.tokenId
 
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp
@@ -82,7 +81,8 @@ export function handleTransfer(event: TransferEvent): void {
   )
   entity.from = event.params.from
   entity.to = event.params.to
-  //entity.tokenId = event.params.tokenId
+  entity.tokenId = event.params.tokenId
+  entity.value = event.params.tokenId
 
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp

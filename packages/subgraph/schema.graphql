@@ -140,13 +140,13 @@ type UpdateVc @entity(immutable: true) {
   transactionHash: Bytes!
 }
 
-type TokenInfo @entity(immutable: true) {
+type TokenInfo @entity {
   id: Bytes!
   name: String! # string
   symbol: String! # string
 }
 
-type UserInfo @entity(immutable: true) {
+type UserInfo @entity {
   id: Bytes!
   did: String! # string
   name: String! # string
