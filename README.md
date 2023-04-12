@@ -42,25 +42,17 @@ graph init \
 ## Sample Query
 
 ```graph
-query {
-    transfers{
-        id
-        to
-        transactionHash
-        blockNumber
-        blockTimestamp
-    }
-    tokenBalances(first: 10){
-        id
-        token{
-            id
-        }
-        amount
-    }
-    tokenBalance(id: "0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072"){
-        id
-        amount
-    }
+{
+  tokenCreateds{
+    id
+    name
+    symbol
+  }
+  balanceChangeds{
+    id
+    to
+    balanceOf
+  }
 }
 ```
 
@@ -69,24 +61,26 @@ query {
 ```json
 {
   "data": {
-    "transfers": [
+    "tokenCreateds": [
       {
-        "id": "0x6605e2982044b779764ecdbc1be9ec68b9ba7da8847ff2bccfc37736423f56f701000000",
-        "to": "0x1295bdc0c102eb105dc0198fdc193588fe66a1e4",
-        "transactionHash": "0x6605e2982044b779764ecdbc1be9ec68b9ba7da8847ff2bccfc37736423f56f7",
-        "blockNumber": "20682251",
-        "blockTimestamp": "1680782528"
-      },
-      {
-        "id": "0xa3e053de94bb900b962b423d5670b1887c44c911cd4e838fc2c42aa2cbcea02100000000",
-        "to": "0x51908f598a5e0d8f1a3babfa6df76f9704dad072",
-        "transactionHash": "0xa3e053de94bb900b962b423d5670b1887c44c911cd4e838fc2c42aa2cbcea021",
-        "blockNumber": "20682226",
-        "blockTimestamp": "1680782475"
+        "id": "0xc0aa0d804cfc74f2c3ba454f2d23b18388ff47c7e1472b22bdaebbbc3a6cc38901000000",
+        "name": "SocialIdentityToken",
+        "symbol": "SIT"
       }
     ],
-    "tokenBalances": [],
-    "tokenBalance": null
+    "balanceChangeds": [
+      {
+        "id": "0x00f646976918eaa130eeb5dfb798cd280a764eab20132387c64c2013a19f836a01000000",
+        "to": "0x1295bdc0c102eb105dc0198fdc193588fe66a1e4",
+        "balanceOf": "100000"
+      },
+      {
+        "id": "0x3f99afcd8e58a0052120b13c5799b3b038febef42b157dd4dafdda95c21bf9ef03000000",
+        "to": "0x51908f598a5e0d8f1a3babfa6df76f9704dad072",
+        "balanceOf": "10000000000000"
+      }
+    ],
+    "registereds": []
   }
 }
 ```
