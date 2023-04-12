@@ -1,24 +1,11 @@
-import { Client, Provider, cacheExchange, fetchExchange, gql, useQuery } from 'urql';
+import { Client, Provider, cacheExchange, fetchExchange, useQuery } from 'urql';
 import './App.css';
+import query from './graphql/query';
 import logo from './logo.svg';
 
 // API エンドポイント
 const API_URL = "https://api.studio.thegraph.com/query/44992/subgraph3/v0.0.2";
-// query
-const query = gql`
-  query {
-    tokenCreateds{
-      id
-      name
-      symbol
-    }
-    balanceChangeds{
-      id
-      to
-      balanceOf
-    }
-  }
-`;
+
 
 // create client
 const client = new Client({
